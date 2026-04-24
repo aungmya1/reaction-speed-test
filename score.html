@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+          name="description"
+          content="View your Reaction Speed Test results, personal best, and round-by-round performance history."
+  />
+  <title>Reaction Speed Test - Score</title>
+  <link rel="stylesheet" href="./css/score.css" />
+  <script defer src="./js/score.js"></script>
+</head>
+<body>
+<main class="page score-page">
+  <div class="blob blob-top-right" aria-hidden="true"></div>
+  <div class="blob blob-bottom-left" aria-hidden="true"></div>
+
+  <section class="content">
+    <header class="page-header">
+      <p class="eyebrow">Results Summary</p>
+      <h1>Reaction Speed Test</h1>
+      <p class="subtitle">Review your performance and try to beat your best score.</p>
+    </header>
+
+    <section class="results-layout" aria-labelledby="results-title">
+      <h2 id="results-title" class="sr-only">Game results</h2>
+
+      <section class="score-card main-score-card">
+        <div class="score-grid">
+          <article class="score-group">
+            <h3>Average Reaction Time</h3>
+            <p id="averageReaction">--</p>
+          </article>
+
+          <article class="score-group">
+            <h3>Best Reaction Time</h3>
+            <p id="bestReaction">--</p>
+          </article>
+
+          <article class="score-group middle-group">
+            <h3>Total Misses</h3>
+            <p id="totalMisses">0</p>
+          </article>
+
+          <article class="score-group">
+            <h3>Difficulty</h3>
+            <p id="difficultyUsed">--</p>
+          </article>
+
+          <article class="score-group">
+            <h3>Successful Hits</h3>
+            <p id="successfulHits">0</p>
+          </article>
+
+          <article class="score-group">
+            <h3>Total Rounds</h3>
+            <p id="totalRounds">0</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="side-panel">
+        <article class="panel-card" aria-live="polite">
+          <h3>Personal Best</h3>
+          <p class="panel-value" id="personalBestAverage">No best score yet</p>
+          <p class="panel-text" id="personalBestDetails">
+            Finish a full game to save your best result.
+          </p>
+        </article>
+
+        <article class="panel-card">
+          <h3>Performance Message</h3>
+          <p class="panel-value small" id="performanceMessage">Ready for another round?</p>
+          <p class="panel-text" id="performanceHint">
+            Keep practising to improve consistency and reduce misses.
+          </p>
+        </article>
+      </section>
+    </section>
+
+    <section class="history-panel" aria-labelledby="history-title">
+      <div class="history-header">
+        <h2 id="history-title">Round History</h2>
+        <p>See exactly how each round went.</p>
+      </div>
+
+      <div class="history-list" id="historyList">
+        <div class="history-empty">No result history available yet.</div>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a class="button button-primary" href="game.html">Play Again</a>
+      <a class="button button-secondary" href="index.html">Home</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

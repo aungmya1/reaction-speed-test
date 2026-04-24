@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+          name="description"
+          content="Play the Reaction Speed Test. Wait for the target, react quickly, avoid early clicks, and complete all rounds."
+  />
+  <title>Reaction Speed Test - Game</title>
+  <link rel="stylesheet" href="./css/game.css" />
+  <script defer src="./js/game.js"></script>
+</head>
+<body>
+<main class="page game-page">
+  <section class="content">
+    <header class="page-header">
+      <h1>Reaction Speed Test</h1>
+      <p class="subtitle">Wait for the target. Click fast. Do not click too early.</p>
+    </header>
+
+    <section class="game-shell" aria-labelledby="game-region-title">
+      <h2 id="game-region-title" class="sr-only">Reaction game area</h2>
+
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="label">Round</span>
+          <strong id="roundDisplay">1 / 10</strong>
+        </article>
+
+        <article class="status-card">
+          <span class="label">Last Time</span>
+          <strong id="timeDisplay">--</strong>
+        </article>
+
+        <article class="status-card">
+          <span class="label">Misses</span>
+          <strong id="missDisplay">0</strong>
+        </article>
+
+        <article class="status-card">
+          <span class="label">Difficulty</span>
+          <strong id="difficultyDisplay">Normal</strong>
+        </article>
+      </div>
+
+      <div class="helper-bar">
+        <p id="instructionText" class="instruction" aria-live="polite">
+          Press Start Round to begin.
+        </p>
+        <button id="muteButton" class="small-button" type="button" aria-pressed="false">
+          Sound: On
+        </button>
+      </div>
+
+      <div
+              class="game-area ready"
+              id="gameArea"
+              tabindex="0"
+              role="button"
+              aria-label="Game area. Wait for the target, then click it quickly."
+      >
+        <div class="countdown-overlay" id="countdownOverlay" aria-hidden="true">
+          <span id="countdownText">3</span>
+        </div>
+
+        <div class="center-message" id="centerMessage">
+          <span class="message-title">Ready?</span>
+          <span class="message-subtitle">Start the round when you are prepared.</span>
+        </div>
+
+        <button
+                class="target-dot hidden"
+                id="targetDot"
+                type="button"
+                aria-label="Reaction target"
+        ></button>
+      </div>
+
+      <div class="control-row">
+        <button class="button button-secondary" id="startRoundButton" type="button">
+          Start Round
+        </button>
+        <button class="button button-secondary" id="restartGameButton" type="button">
+          Restart Game
+        </button>
+        <a class="button button-primary" id="quitButton" href="score.html">Quit</a>
+      </div>
+
+      <section class="history-panel" aria-labelledby="history-title">
+        <div class="history-header">
+          <h3 id="history-title">Reaction History</h3>
+          <p>Each completed round is recorded below.</p>
+        </div>
+
+        <div class="history-list" id="historyList">
+          <div class="history-empty">No rounds completed yet.</div>
+        </div>
+      </section>
+
+      <p class="keyboard-tip">
+        Keyboard: <kbd>Space</kbd> to start a round, <kbd>R</kbd> to restart, and <kbd>Enter</kbd> on the game area to react.
+      </p>
+    </section>
+  </section>
+</main>
+</body>
+</html>

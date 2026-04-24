@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+          name="description"
+          content="Test your reflexes in this reaction speed game. Choose a difficulty, start the challenge, and beat your best score."
+  />
+  <title>Reaction Speed Test - Home</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <script defer src="./js/index.js"></script>
+</head>
+<body>
+<main class="page home-page">
+  <div class="blob blob-top-right" aria-hidden="true"></div>
+  <div class="blob blob-bottom-left" aria-hidden="true"></div>
+
+  <section class="content">
+    <header class="hero">
+      <p class="eyebrow">Reaction Challenge</p>
+      <h1>Reaction Speed Test</h1>
+      <p class="intro">How sharp are your reactions?</p>
+      <p class="quote">Click the dot as fast as possible when it appears.</p>
+    </header>
+
+    <section class="menu-card" aria-labelledby="game-options-title">
+      <h2 id="game-options-title" class="sr-only">Game options</h2>
+
+      <div class="info-grid">
+        <article class="info-box" aria-label="How to play">
+          <h3>How to Play</h3>
+          <ul class="rules-list">
+            <li>Choose a difficulty level.</li>
+            <li>Wait for the dot to appear.</li>
+            <li>Click it as quickly as possible.</li>
+            <li>Do not click too early or you get a penalty.</li>
+          </ul>
+        </article>
+
+        <article class="info-box stats-box" aria-live="polite">
+          <h3>Your Best</h3>
+          <p class="stat-value" id="bestAverage">No score yet</p>
+          <p class="stat-subtext" id="bestDetails">Complete a game to save your best average.</p>
+        </article>
+      </div>
+
+      <form class="settings-form" id="settingsForm">
+        <fieldset class="setting-group difficulty-group">
+          <legend>Difficulty</legend>
+
+          <label class="option-card">
+            <input type="radio" name="difficulty" value="easy" checked />
+            <span class="option-content">
+                <span class="option-title">Easy</span>
+                <span class="option-text">Larger dot and more time to react</span>
+              </span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="difficulty" value="normal" />
+            <span class="option-content">
+                <span class="option-title">Normal</span>
+                <span class="option-text">Balanced challenge for most players</span>
+              </span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="difficulty" value="hard" />
+            <span class="option-content">
+                <span class="option-title">Hard</span>
+                <span class="option-text">Smaller dot and less time to react</span>
+              </span>
+          </label>
+        </fieldset>
+
+        <div class="setting-row">
+          <label class="toggle-card" for="soundToggle">
+              <span class="toggle-text">
+                <span class="toggle-title">Sound Effects</span>
+                <span class="toggle-subtext">Turn game audio on or off</span>
+              </span>
+
+            <span class="switch">
+                <input type="checkbox" id="soundToggle" checked />
+                <span class="slider" aria-hidden="true"></span>
+              </span>
+          </label>
+        </div>
+
+        <div class="button-group">
+          <a class="button button-secondary" href="score.html">View Scores</a>
+          <button class="button button-primary" type="submit">Start Game</button>
+        </div>
+      </form>
+
+      <p class="keyboard-tip">
+        Tip: Press <kbd>Enter</kbd> to start quickly.
+      </p>
+    </section>
+  </section>
+</main>
+</body>
+</html>
